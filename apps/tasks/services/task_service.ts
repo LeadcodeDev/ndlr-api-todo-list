@@ -1,5 +1,5 @@
-import Task from '#models/task'
-import { StoreTaskSchema, UpdateTaskSchema } from '#validators/task'
+import Task from '../models/task.js'
+import { StoreTaskSchema, UpdateTaskSchema } from '../validators/task'
 
 export default class TaskService {
   async getTasks(): Promise<Task[]> {

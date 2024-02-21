@@ -8,7 +8,7 @@
 */
 
 import router from '@adonisjs/core/services/router'
-const TasksController = () => import('#controllers/tasks_controller')
+const TasksController = () => import('./controllers/tasks_controller.js')
 
 router.group(() => {
   router.get('/tasks', [TasksController, 'index'])

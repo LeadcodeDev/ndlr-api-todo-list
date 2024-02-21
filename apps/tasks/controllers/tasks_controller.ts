@@ -1,9 +1,9 @@
 import type { HttpContext } from '@adonisjs/core/http'
 
 import { inject } from '@adonisjs/core'
-import TaskService from '#services/task_service'
-import Task from '#models/task'
-import { storeTaskValidator, updateTaskValidator } from '#validators/task'
+import TaskService from '#apps/tasks/services/task_service'
+import { storeTaskValidator, updateTaskValidator } from '#apps/tasks/validators/task'
+import Task from '#apps/tasks/models/task'
 
 @inject()
 export default class TasksController {
