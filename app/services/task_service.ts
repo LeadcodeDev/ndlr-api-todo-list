@@ -3,7 +3,7 @@ import { StoreTaskSchema, UpdateTaskSchema } from '#validators/task'
 
 export default class TaskService {
   async getTasks(): Promise<Task[]> {
-    return Task.all()
+    return Task.query().orderBy('created_at', 'asc')
   }
 
   async getTaskOrFail(uid: string): Promise<Task> {
